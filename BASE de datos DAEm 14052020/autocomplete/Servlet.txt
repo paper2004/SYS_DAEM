@@ -1,0 +1,6 @@
+        String find =request.getParameter("nombre").toUpperCase();
+        ArrayList<String> name = new Modelo.ModeloUsuario().getNombreSession(find);
+        String json = new Gson().toJson(name);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(json);
