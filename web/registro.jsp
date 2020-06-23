@@ -34,18 +34,7 @@
   </div>
   <div class="container">
     <form class="form-group" method="post" id="frm-registro" action="registrar">
-      <div class="form-row">
-          <div class="form-group col-md-9">
-              <select class="form-group" name="cboIdEstablecimiento" id="cboIdEstablecimiento" >
-                  <option  selected="">Escoja un establecimiento </option>
-                  
-                  
-                  
-                  
-              </select>
-              
-         </div>
-      </div>
+      
       <div class="form-row">
         <div class="form-group col-md-9">
             <input type="text" class="form-control" id="txtRut" name="txtRut" placeholder="Ingrese su RUT">
@@ -86,6 +75,20 @@
             <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Ingrese Email">
          </div>
       </div>
+      <div class="form-row">
+          <div class="form-group col-md-9">
+              <select class="form-group" name="cboIdEstablecimiento" id="cboIdEstablecimiento" >
+                  <option  selected="">Escoja un establecimiento </option>
+                  
+                  
+                  
+                  
+              </select>
+              
+         </div>
+      </div>  
+        
+        
             <button type="submit" class="btn btn-primary">Registrate</button>
     </form>
   </div>
