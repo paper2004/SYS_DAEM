@@ -53,16 +53,12 @@ public class ModeloUsuario extends Conexion{
     public boolean autenticar(Usuario u){
         boolean flag = false;
         PreparedStatement pst = null;
-        PreparedStatement pst2 = null;
         ResultSet rs = null;
         try {
-            
             String sql = "call autenticar (?,?)";
             pst = getConnection().prepareStatement(sql);
-           
             pst.setString(1, u.getRut());
             pst.setString(2, Encriptar.sha1(u.getPass()));
-           
             rs = pst.executeQuery();
             if (rs.absolute(1)) {
                    flag=true;

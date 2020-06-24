@@ -41,6 +41,17 @@ CREATE PROCEDURE newEstablecimiento(
 END
 // DELIMITER ;
 
+DELIMITER //
+CREATE PROCEDURE cboEstablecimiento(
+in 	_id_establecimiento int,
+	_est_nombre varchar(100)
+)BEGIN
+	select id_establecimiento,est_nombre from establecimiento where id_establecimiento=_id_establecimiento and est_nombre=_est_nombre;
+END
+//DELIMITER ;
+
+call cboEstablecimiento('1','Sixto Mendez Parada');
+
 call newEstablecimiento('Sixto Mendez Parada','Guillermo Berrios N°236','Graneros','2206-3',null,now());
 call newEstablecimiento('Colegio Tuniche','Camino Real s/n','Graneros','2212-8',null,now());
 call newEstablecimiento('Liceo Integrado de Adultos','Luis Barros Borgoño Sur n°0725','Graneros','15665-5',null,now());
@@ -64,7 +75,6 @@ apellido varchar(100) not null,
 pass varchar(100) not null, 
 proceso varchar (100) not null,
 cargo varchar (100) not null,
-
 email varchar (100) not null,
 ult_session datetime not null,
 unique(rut)

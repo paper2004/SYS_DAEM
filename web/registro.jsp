@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page  import="Controlador.ControladorUsuario"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,7 +80,7 @@
           <div class="form-group col-md-9">
               <select class="form-group" name="cboIdEstablecimiento" id="cboIdEstablecimiento" >
                   <option  selected="">Escoja un establecimiento </option>
-                  
+                  <option value="<%%>"></option>
                   
                   
                   
